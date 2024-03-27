@@ -13,17 +13,17 @@ public class TicketTrain {
 
         // Chiedo all'utente di inserire l'età del passeggero
         System.out.print("Inserisci l'età del passeggero: ");
-        int eta = scanner.nextInt();
+        int age = scanner.nextInt();
 
         // Definiamo il prezzo per chilometro
         double priceKm = 0.21;
         // Calcoliamo il prezzo totale del viaggio basato sui km inseriti e il prezzo per chilometro
         double totalPrice = km * priceKm;
 
-        if (eta < 18) {
+        if (age < 18) {
             // Applico lo sconto del 20% per i minorenni
             totalPrice -= totalPrice * 0.20;
-        } else if (eta >= 65) {
+        } else if (age >= 65) {
             // Applica lo sconto del 40% per gli over 65
             totalPrice -= totalPrice * 0.40;
         }
